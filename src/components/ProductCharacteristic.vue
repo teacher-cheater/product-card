@@ -1,6 +1,10 @@
+<script>
+export default {};
+</script>
+
 <template>
-  <div class="main__container">
-    <table class="main__table">
+  <div class="product-characteristic">
+    <table class="product-characteristic__table">
       <tbody>
         <tr>
           <td>Модель</td>
@@ -23,8 +27,33 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<style lang="scss" scoped>
+.product-characteristic {
+  margin: 0 auto 45px;
+  flex: auto;
 
-<style lang="scss" scoped></style>
+  &__table {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border: 10px solid rgb(146, 136, 255);
+    border-radius: 30px;
+    border-collapse: collapse;
+  }
+
+  &__table td {
+    padding: 12px;
+    border-bottom: 2px solid rgb(146, 136, 255);
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  &__table tr:last-child td {
+    border-bottom: none;
+  }
+}
+</style>

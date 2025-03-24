@@ -21,7 +21,7 @@ const prevSlide = () => {
 </script>
 
 <template>
-  <div class="main__container carousel">
+  <div class="carousel">
     <button class="btn-prev" @click="prevSlide">
       <img src="../assets/arrow-left.svg" alt="prev" />
     </button>
@@ -51,6 +51,9 @@ const prevSlide = () => {
   position: relative;
   width: 603px;
   height: 452px;
+
+  margin: 0 auto 45px;
+  flex: auto;
 
   &__wrapper {
     overflow: hidden;

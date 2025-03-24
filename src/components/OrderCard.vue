@@ -57,7 +57,10 @@ const emit = defineEmits(["close"]);
   border: 10px solid rgb(146, 136, 255);
   border-radius: 30px;
   & h2 {
-    @extend .main__description !optional;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.125;
   }
 }
 

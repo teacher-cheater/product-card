@@ -7,33 +7,74 @@ const emit = defineEmits(["open", "changeTab"]);
 </script>
 
 <template>
-  <div class="main__header">
+  <div class="header-card">
     <button
-      class="main__btn tab-btn"
+      class="header-card__btn tab-btn"
       :class="{ active: activeTab === 'product' }"
       @click="emit('changeTab', 'product')"
     >
       product
     </button>
     <button
-      class="main__btn tab-btn"
+      class="header-card__btn tab-btn"
       :class="{ active: activeTab === 'description' }"
       @click="emit('changeTab', 'description')"
     >
       description
     </button>
     <button
-      class="main__btn tab-btn"
+      class="header-card__btn tab-btn"
       :class="{ active: activeTab === 'characteristics' }"
       @click="emit('changeTab', 'characteristics')"
     >
       characteristics
     </button>
-    <button @click="emit('open')" class="main__btn order-btn">ORDER NOW</button>
+    <button @click="emit('open')" class="header-card__btn order-btn">
+      ORDER NOW
+    </button>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  
+.header-card {
+  display: grid;
+  grid-template-columns: repeat(4, 169px);
+  gap: 20px;
+  padding: 51px 30px 65px 30px;
 
+  &__btn {
+    padding: 19px 42px;
+    border: none;
+    outline: none;
+    background-color: rgb(192, 187, 255);
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out 0s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__btn:hover {
+    background-color: rgb(146, 136, 255);
+    color: rgb(255, 255, 255);
+  }
+}
+
+.tab-btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.tab-btn.active {
+  background: rgb(59, 45, 222);
+  color: rgb(255, 255, 255);
+}
 </style>
