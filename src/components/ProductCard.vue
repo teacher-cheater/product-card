@@ -21,6 +21,11 @@ const openModal = () => {
 const closeModal = () => {
   dialogVisible.value = false;
 };
+
+const productNumber = ref("02");
+const productTitle = ref("BASS BOOSTED HEADPHONES");
+const productDescription = ref("WIRELESS HEADPHONES");
+const productLinkText = ref("WINDOWS COMPATIBLE");
 </script>
 
 <template>
@@ -33,8 +38,8 @@ const closeModal = () => {
         @changeTab="setActiveTab"
       />
       <div class="product-card__info">
-        <h3 class="product-card__subtitle">02</h3>
-        <h2 class="product-card__title">BASS BOOSTED HEADPHONES</h2>
+        <h3 class="product-card__subtitle">{{ productNumber }}</h3>
+        <h2 class="product-card__title">{{ productTitle }}</h2>
       </div>
 
       <ProductDescription v-if="activeTab === 'description'" />
@@ -46,8 +51,8 @@ const closeModal = () => {
       <SliderProduct v-if="activeTab === 'product'" />
 
       <div class="product-card__text">
-        <p class="product-card__description">WIRELESS HEADPHONES</p>
-        <a href="#" class="product-card__link">WINDOWS COMPATIBLE</a>
+        <p class="product-card__description">{{ productDescription }}</p>
+        <a href="#" class="product-card__link">{{ productLinkText }}</a>
       </div>
     </section>
   </main>

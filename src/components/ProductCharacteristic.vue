@@ -1,5 +1,9 @@
-<script>
-export default {};
+<script setup>
+import { ref } from "vue";
+const productModel = ref("XYZ-123");
+const productType = ref("Беспроводные");
+const productAutonomy = ref("20 часов");
+const productWeight = ref("386");
 </script>
 
 <template>
@@ -8,19 +12,19 @@ export default {};
       <tbody>
         <tr>
           <td>Модель</td>
-          <td>XYZ-123</td>
+          <td>{{ productModel }}</td>
         </tr>
         <tr>
           <td>Тип</td>
-          <td>Беспроводные</td>
+          <td>{{ productType }}</td>
         </tr>
         <tr>
           <td>Автономность</td>
-          <td>20 часов</td>
+          <td>{{ productAutonomy }}</td>
         </tr>
         <tr>
           <td>Вес, г</td>
-          <td>386</td>
+          <td>{{ productWeight }}</td>
         </tr>
       </tbody>
     </table>

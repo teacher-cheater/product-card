@@ -1,16 +1,24 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const title = ref("SONY");
+const subtitle = ref("Feel The Music");
+const mainTitle = ref("State Of The Sound");
+const model = ref("HD 2000");
+const description = ref("Wireless Headphones");
+const price = ref("$250");
+</script>
 
 <template>
   <section class="info-product">
     <div class="info-product__titles">
-      <h1 class="info-product__title">info-product</h1>
-      <p class="info-product__subtitle">Feel The Music</p>
+      <h1 class="info-product__title">{{ title }}</h1>
+      <p class="info-product__subtitle">{{ subtitle }}</p>
     </div>
     <div class="info-product__main-text text-main">
-      <h3 class="text-main__title">State Of The Sound</h3>
-      <p class="text-main__subtitle">HD 2000</p>
-      <p class="text-main__desc">Wireless Headphones</p>
-      <p class="text-main__price">$250</p>
+      <h3 class="text-main__title">{{ mainTitle }}</h3>
+      <p class="text-main__subtitle">{{ model }}</p>
+      <p class="text-main__desc">{{ description }}</p>
+      <p class="text-main__price">{{ price }}</p>
     </div>
     <div class="info-product__aside-line"></div>
     <button class="info-product__btn-video">
