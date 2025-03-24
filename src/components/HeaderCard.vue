@@ -36,6 +36,7 @@ const emit = defineEmits(["open", "changeTab"]);
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/styles/variables" as *;
 .header-card {
   display: grid;
   grid-template-columns: repeat(4, 169px);
@@ -46,7 +47,7 @@ const emit = defineEmits(["open", "changeTab"]);
     padding: 19px 42px;
     border: none;
     outline: none;
-    background-color: rgb(192, 187, 255);
+    background-color: $primary-color;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
     font-family: Lato;
@@ -62,7 +63,7 @@ const emit = defineEmits(["open", "changeTab"]);
   }
 
   &__btn:hover {
-    background-color: rgb(146, 136, 255);
+    background-color: $color;
     color: rgb(255, 255, 255);
   }
 }
@@ -74,7 +75,7 @@ const emit = defineEmits(["open", "changeTab"]);
 }
 
 .tab-btn.active {
-  background: rgb(59, 45, 222);
+  background: $secondary-color;
   color: rgb(255, 255, 255);
 }
 </style>

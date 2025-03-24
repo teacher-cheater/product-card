@@ -28,6 +28,7 @@ export default {};
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/styles/variables" as *;
 .product-characteristic {
   margin: 0 auto 45px;
   flex: auto;
@@ -39,14 +40,14 @@ export default {};
     width: 600px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
-    border: 10px solid rgb(146, 136, 255);
+    border: 10px solid $color;
     border-radius: 30px;
     border-collapse: collapse;
   }
 
   &__table td {
     padding: 12px;
-    border-bottom: 2px solid rgb(146, 136, 255);
+    border-bottom: 2px solid $color;
     font-size: 18px;
     font-weight: bold;
     color: #333;

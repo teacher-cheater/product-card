@@ -16,13 +16,14 @@ const emit = defineEmits(["close"]);
       <input type="text" placeholder="Name" id="name" />
       <input type="tel" placeholder="Phone number" id="phone" />
       <button class="submit-btn">
-        Send <img src="../assets/arrow.svg" alt="arrow next" />
+        Send <img src="../assets/images/arrow.svg" alt="arrow next" />
       </button>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/styles/variables" as *;
 .order-form {
   margin-top: 20px;
   display: flex;
@@ -54,7 +55,7 @@ const emit = defineEmits(["close"]);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
 
-  border: 10px solid rgb(146, 136, 255);
+  border: 10px solid $color;
   border-radius: 30px;
   & h2 {
     font-family: Lato;
@@ -82,7 +83,17 @@ const emit = defineEmits(["close"]);
 }
 
 .submit-btn {
-  @extend .sony__btn-video !optional;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  border-radius: 10px;
+  background: $color;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  gap: 14px;
+  cursor: pointer;
   position: static;
   padding: 12px 22px;
   text-transform: uppercase;
@@ -90,18 +101,22 @@ const emit = defineEmits(["close"]);
   & img {
     width: 30px;
     height: 30px;
-  }
-}
-
-.submit-btn:hover {
-  & img {
     background: rgb(255, 255, 255);
     border-radius: 50%;
     padding: 8px 7px;
     transition: all 0.3s ease-in-out 0s;
   }
-  &:hover img {
-    transform: translateX(5px);
+  &:hover {
+    & img {
+      background: rgb(255, 255, 255);
+      border-radius: 50%;
+      padding: 8px 7px;
+      transition: all 0.3s ease-in-out 0s;
+    }
+    &:hover img {
+      transform: translateX(5px);
+    }
   }
 }
+
 </style>

@@ -54,6 +54,7 @@ const closeModal = () => {
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/styles/variables" as *;
 .product-card {
   display: flex;
   width: 1480px;
@@ -83,7 +84,7 @@ const closeModal = () => {
 
   &__title {
     max-width: 276px;
-    color: rgb(59, 45, 222);
+    color: $secondary-color;
     font-family: Lato;
     font-size: 36px;
     font-weight: 400;
@@ -102,7 +103,7 @@ const closeModal = () => {
   }
 
   &__link {
-    color: rgb(59, 45, 222);
+    color: $secondary-color;
   }
 }
 </style>

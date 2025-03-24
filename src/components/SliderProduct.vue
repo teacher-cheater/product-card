@@ -1,9 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
 const images = ref([
-  new URL("../assets/headphones-1.jpg", import.meta.url).href,
-  new URL("../assets/headphones-2.jpg", import.meta.url).href,
-  new URL("../assets/headphones-3.jpg", import.meta.url).href,
+  new URL("../assets/images/headphones-1.jpg", import.meta.url).href,
+  new URL("../assets/images/headphones-2.jpg", import.meta.url).href,
+  new URL("../assets/images/headphones-3.jpg", import.meta.url).href,
 ]);
 
 const activeImage = ref(0);
@@ -23,10 +23,10 @@ const prevSlide = () => {
 <template>
   <div class="carousel">
     <button class="btn-prev" @click="prevSlide">
-      <img src="../assets/arrow-left.svg" alt="prev" />
+      <img src="../assets/images/arrow-left.svg" alt="prev" />
     </button>
     <button class="btn-next" @click="nextSlide">
-      <img src="../assets/arrow-right.svg" alt="next" />
+      <img src="../assets/images/arrow-right.svg" alt="next" />
     </button>
     <div class="carousel__wrapper">
       <div
@@ -47,6 +47,7 @@ const prevSlide = () => {
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/styles/variables" as *;
 .carousel {
   position: relative;
   width: 603px;
@@ -82,7 +83,7 @@ const prevSlide = () => {
 
 .btn-prev,
 .btn-next {
-  background: rgb(192, 187, 255);
+  background: $primary-color;
   padding: 12px 31px;
   position: absolute;
   top: 30%;

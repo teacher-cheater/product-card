@@ -14,20 +14,21 @@
     </div>
     <div class="info-product__aside-line"></div>
     <button class="info-product__btn-video">
-      Watch Video <img src="../assets/arrow.svg" alt="arrow next" />
+      Watch Video <img src="../assets/images/arrow.svg" alt="arrow next" />
     </button>
   </section>
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/styles/variables" as *;
 .info-product {
-  background: rgb(40, 40, 40);
+  background: $overlay-color;
   padding: 54px 52px 239px;
   max-width: 700px;
   width: 100%;
   border-radius: 0 14px 14px 14px;
-  border-right: 15px solid rgb(192, 187, 255);
-  border-bottom: 15px solid rgb(192, 187, 255);
+  border-right: 15px solid $primary-color;
+  border-bottom: 15px solid $primary-color;
   position: relative;
 
   &__titles {
@@ -66,7 +67,7 @@
     position: absolute;
     bottom: 0;
     border-radius: 20px;
-    background: rgb(146, 136, 255);
+    background: $color;
     width: 8px;
     height: 80px;
   }
@@ -80,7 +81,7 @@
     bottom: -38px;
     right: 50px;
     border-radius: 10px;
-    background: rgb(146, 136, 255);
+    background: $color;
     padding: 19px 37px;
     display: flex;
     align-items: center;
@@ -118,7 +119,7 @@
   }
 
   &__subtitle {
-    color: rgb(146, 136, 255);
+    color: $color;
     font-size: 48px;
     font-weight: 500;
     line-height: 1.5;
