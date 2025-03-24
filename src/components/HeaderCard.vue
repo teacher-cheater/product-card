@@ -42,6 +42,10 @@ const emit = defineEmits(["open", "changeTab"]);
   grid-template-columns: repeat(4, 169px);
   gap: 20px;
   padding: 51px 30px 65px 30px;
+  @media (max-width: 767.98px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px 10px;
+  }
 
   &__btn {
     padding: 19px 42px;
@@ -72,6 +76,9 @@ const emit = defineEmits(["open", "changeTab"]);
   padding: 10px 15px;
   cursor: pointer;
   border: none;
+  @media (max-width: 767.98px) {
+    min-height: 62px;
+  }
 }
 
 .tab-btn.active {

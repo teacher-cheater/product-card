@@ -30,9 +30,20 @@
   border-right: 15px solid $primary-color;
   border-bottom: 15px solid $primary-color;
   position: relative;
-
+  @media (max-width: 767.98px) {
+    max-width: 100%;
+    border-radius: 8px;
+    padding: 30px 30px 90px;
+    border-right: none;
+  }
+  @media (max-width: 543.98px) {
+    padding: 30px;
+  }
   &__titles {
     margin-bottom: 131px;
+    @media (max-width: 767.98px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -60,6 +71,10 @@
     top: 50%;
     left: 52px;
     transform: translateY(-50%);
+    @media (max-width: 767.98px) {
+      width: 0;
+      height: 0;
+    }
   }
 
   &__aside-line::after {
@@ -70,10 +85,13 @@
     background: $color;
     width: 8px;
     height: 80px;
+    @media (max-width: 767.98px) {
+      width: 0;
+      height: 0;
+    }
   }
 
-  &__btn-video,
-  .submit-btn {
+  &__btn-video {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
@@ -89,6 +107,10 @@
     font-family: Lato;
     gap: 14px;
     cursor: pointer;
+    @media (max-width: 767.98px) {
+      position: static;
+      padding: 14px 34px;
+    }
   }
 
   &__btn-video img,
@@ -108,6 +130,11 @@
 .text-main {
   max-width: 476px;
   margin-left: 87px;
+  @media (max-width: 767.98px) {
+    margin-bottom: 38px;
+    max-width: 100%;
+    margin-left: 55px;
+  }
 
   &__title {
     max-width: 268px;
@@ -116,6 +143,11 @@
     font-weight: 600;
     line-height: 1.46;
     margin-bottom: 31px;
+    @media (max-width: 767.98px) {
+      max-width: 100%;
+      font-size: 32px;
+      line-height: 1;
+    }
   }
 
   &__subtitle {
@@ -124,6 +156,10 @@
     font-weight: 500;
     line-height: 1.5;
     margin-bottom: 24px;
+    @media (max-width: 767.98px) {
+      font-size: 32px;
+      line-height: 1;
+    }
   }
 
   &__desc {
@@ -132,6 +168,10 @@
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 46px;
+    @media (max-width: 767.98px) {
+      font-size: 20px;
+      line-height: 1;
+    }
   }
 
   &__price {

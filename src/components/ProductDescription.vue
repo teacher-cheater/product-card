@@ -22,6 +22,9 @@ export default {};
     line-height: 1.2;
     color: #000;
     padding: 10px 64px 10px 51px;
+    @media (max-width: 767.98px) {
+      padding: 12px;
+    }
   }
 }
 </style>

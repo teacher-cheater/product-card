@@ -52,9 +52,12 @@ const prevSlide = () => {
   position: relative;
   width: 603px;
   height: 452px;
-
   margin: 0 auto 45px;
   flex: auto;
+  @media (max-width: 767.98px) {
+    width: 100%;
+    height: auto;
+  }
 
   &__wrapper {
     overflow: hidden;
@@ -77,6 +80,10 @@ const prevSlide = () => {
       opacity: 1;
       max-width: 603px;
       max-height: 452px;
+      @media (max-width: 767.98px) {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 }
@@ -89,6 +96,9 @@ const prevSlide = () => {
   top: 30%;
   cursor: pointer;
   z-index: 3;
+  @media (max-width: 767.98px) {
+    padding: 12px 20px;
+  }
 }
 .btn-prev img,
 .btn-next img {
@@ -98,6 +108,9 @@ const prevSlide = () => {
 .btn-prev {
   left: -97px;
   border-radius: 0 30px 30px 0;
+  @media (max-width: 767.98px) {
+    left: 0;
+  }
 }
 .btn-prev:hover img {
   transform: translateX(-8px) scale(1.2);
@@ -106,6 +119,9 @@ const prevSlide = () => {
 .btn-next {
   right: -97px;
   border-radius: 30px 0 0 30px;
+  @media (max-width: 767.98px) {
+    right: 0;
+  }
 }
 .btn-next:hover img {
   transform: translateX(8px) scale(1.2);

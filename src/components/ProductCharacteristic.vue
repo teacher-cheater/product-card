@@ -43,6 +43,9 @@ export default {};
     border: 10px solid $color;
     border-radius: 30px;
     border-collapse: collapse;
+    @media (max-width: 767.98px) {
+      width: 100%;
+    }
   }
 
   &__table td {
